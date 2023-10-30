@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
-import styles from './Reg.module.css';
+import styles from './Login.module.css';
 
 
 function Reg() {
@@ -27,15 +27,15 @@ function Reg() {
     return(
         <div>
             <form onSubmit={submit}>
-                <div className={styles.regBox}>
+                <div className={styles.loginBox}>
                     <img className={styles.logo}
                     src = 'logo.png '
                     />
                     <div> 
-                        <p className={styles.reg}> Войти </p>
+                        <p className={styles.login}> Войти </p>
                     </div>
                     <div>
-                        <p className={styles.underReg}> 
+                        <p className={styles.underLogin}> 
                             Введите свои данные, чтобы получить доступ к вашей учётной записи
                         </p>
                     </div>
@@ -58,13 +58,12 @@ function Reg() {
                         placeholder=' Пароль'
                         className={styles.loginInput}
                         />
-                        <label className={styles.label}> Повторите пароль </label>
                        <input type="submit" value="Войти"/>
                     </div>
                     <div className={styles.underSubmit}>
-                            <span> У вас уже есть аккаунт? </span>
+                            <span> Ещё не зарегистрированы? </span>
                             <span>
-                                <Link to="/login"> Войти в аккаунт </Link>
+                                <Link to="/login"> Создать аккаунт </Link>
                             </span>
                     </div>
                 </div>
