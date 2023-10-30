@@ -7,24 +7,18 @@ import styles from './Reg.module.css';
 function Reg() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [repeatPassword, setRepeatPassword] = useState('')
     const [cookies, setCookie] = useCookies(['username', 'password'])
 
 
     const usernameChange = (event) => setUsername(event.target.value)
 
     const passwordChange = (event) => setPassword(event.target.value)
-
-    const repeatPasswordChange = (event) => setRepeatPassword(event.target.value)
     
     const submit = (event) => {
         event.preventDefault();
-        if (repeatPassword === password && (username && password)) {
-            const newUsername = username
-            const newPassword = password
-            setCookie('username', newUsername, {path: "/"})
-            setCookie('password', newPassword, {path: "/"})
-            console.log("После изменения cookie")
+        if (username && password) {
+            setCookie('username', username, {path: "/"})
+            setCookie('password', password, {path: "/"})
             console.log(cookies.username)
             console.log(cookies.password)
         }
@@ -38,12 +32,12 @@ function Reg() {
                     src = 'logo.png '
                     />
                     <div> 
-                        <p className={styles.reg}> Регистрация </p>
+                        <p className={styles.reg}> Войти </p>
                     </div>
                     <div>
-                        {/* <p className={styles.underReg}> 
-                            Введите данные, которые будут использоваться для входа в аккаунт
-                        </p> */}
+                        <p className={styles.underReg}> 
+                            Введите свои данные, чтобы получить доступ к вашей учётной записи
+                        </p>
                     </div>
                     <div className={styles.fields}>
                         <label className={styles.label}>Имя пользователя</label>
@@ -65,14 +59,7 @@ function Reg() {
                         className={styles.loginInput}
                         />
                         <label className={styles.label}> Повторите пароль </label>
-                        <input
-                        name = "repeatPassword"
-                        type="password"
-                        value={repeatPassword}
-                        onChange={repeatPasswordChange}
-                        placeholder=' Повторите пароль'
-                        className={styles.loginInput}/>
-                        <input type="submit" value="Зарегистрироваться"/>
+                       <input type="submit" value="Войти"/>
                     </div>
                     <div className={styles.underSubmit}>
                             <span> У вас уже есть аккаунт? </span>
