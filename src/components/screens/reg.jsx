@@ -35,7 +35,7 @@ function Reg() {
             <form onSubmit={submit}>
                 <div className={styles.regBox}>
                     <img className={styles.logo}
-                    src = 'logo.png '
+                    src = 'logo.png ' alt={'logo'}
                     />
                     <div> 
                         <p className={styles.reg}> Регистрация </p>

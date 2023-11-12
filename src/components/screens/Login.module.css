@@ -7,11 +7,11 @@
     justify-content: center;
     flex-shrink: 10;
     align-items: center;
-    font-family: Inter;
+    font-family: Inter, serif;
     background-color: #1C1C1C;;
     color: #FAFAFA;
     border-radius: 12px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
 }
 
 .logo{
@@ -25,11 +25,8 @@
 }
 
 .underLogin{
-    margin-left: 3dvw;
-    margin-right: 3dvw;
-    margin-top: 0.5dvh;
-    margin-bottom: 10dvh;
-    text-wrap: wrap;
+    margin: 0.5dvh 3dvw 7dvh;
+    text-wrap: normal;
     color: #828282;
     font-size: 16px;
     font-style: normal;
@@ -38,8 +35,7 @@
 }
 
 .underSubmit{
-    margin-top: 2dvh;
-    margin-bottom: 5dvh;
+    margin: 2dvh 0 0 4dvh;
     color: #828282;
     font-size: 12px;
     font-style: normal;
@@ -63,23 +59,26 @@
 }
 
 .loginInput::placeholder { 
-    font-family: Inter;
+    font-family: Inter, serif;
     font-size: 12px;
     opacity: 1;
+    color: #BDBDBD;
 }
   
 .loginInput:-ms-input-placeholder { 
-    font-family: Inter;
+    font-family: Inter, serif;
+    color: #BDBDBD;
 }
   
 .loginInput::-ms-input-placeholder { 
-    font-family: Inter;
+    font-family: Inter, serif;
+    color: #BDBDBD;
 }
 
 body{
     overflow: hidden;
     background-attachment: fixed;
-    background-image: url("1.png");
+    background-image: url('1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -100,7 +99,7 @@ input[name]{
 }
 
 input[type="submit"]{
-    font-family: Inter;
+    font-family: Inter, serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;

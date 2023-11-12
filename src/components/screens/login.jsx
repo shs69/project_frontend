@@ -29,8 +29,7 @@ function Reg() {
             <form onSubmit={submit}>
                 <div className={styles.loginBox}>
                     <img className={styles.logo}
-                    src = 'logo.png '
-                    />
+                    src = 'logo.png' alt={"logo"}/>
                     <div> 
                         <p className={styles.login}> Войти </p>
                     </div>
@@ -63,7 +62,7 @@ function Reg() {
                     <div className={styles.underSubmit}>
                             <span> Ещё не зарегистрированы? </span>
                             <span>
-                                <Link to="/login"> Создать аккаунт </Link>
+                                <Link to="/reg"> Создать аккаунт </Link>
                             </span>
                     </div>
                 </div>
