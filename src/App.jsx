@@ -1,7 +1,7 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-import Login from './components/screens/login'
-import Reg from './components/screens/reg'
+import Login from './components/screens/Login/login'
+import Reg from './components/screens/Reg/reg'
 import { CookiesProvider } from 'react-cookie';
 
 function App(){

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import styles from './Reg.module.css';
 
-    
+
 function Reg() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
