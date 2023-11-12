@@ -29,7 +29,12 @@ function Reg() {
             <form onSubmit={submit}>
                 <div className={styles.loginBox}>
                     <img className={styles.logo}
-                        src = 'logo.png' alt={"logo"}/>
+<<<<<<<< HEAD:src/components/screens/Login/login.jsx
+                    src = 'logo.png' alt={"logo"}/>
+========
+                    src = 'logo.png ' alt={'logo'}
+                    />
+>>>>>>>> RegPage:src/components/screens/Reg/reg.jsx
                     <div> 
                         <p className={styles.login}> Войти </p>
                     </div>
