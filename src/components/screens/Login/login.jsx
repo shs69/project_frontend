@@ -29,7 +29,7 @@ function Reg() {
     return (
         <div className={styles.body}>
             <form onSubmit={submit}>
-                <div className={styles.loginBox}>
+                <div className={styles.box}>
                     <img className={styles.logo}
                         src='logo.png' alt={"logo"} />
                     <div>
@@ -48,7 +48,7 @@ function Reg() {
                             value={username}
                             onChange={usernameChange}
                             placeholder=' Имя пользователя или почта'
-                            className={styles.loginInput}
+                            className={styles.inputs}
                         />
                         <label className={styles.label}>Пароль</label>
                         <input
@@ -57,7 +57,7 @@ function Reg() {
                             value={password}
                             onChange={passwordChange}
                             placeholder=' Пароль'
-                            className={styles.loginInput}
+                            className={styles.inputs}
                         />
                         <input type="submit" value="Войти" />
                     </div>

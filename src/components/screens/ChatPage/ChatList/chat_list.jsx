@@ -3,9 +3,7 @@ import Profile from "../Profile/profile";
 import styles from "./Chatlist.module.css";
 
 const ChatList = ({chats, onSelect, selectedChat, openProfile}) => {
-
-    
-
+  
     return (
         <div className={styles.chatList}>
             <Profile openProfile={openProfile}/>
@@ -23,6 +21,5 @@ const ChatList = ({chats, onSelect, selectedChat, openProfile}) => {
         </div>
     );
 };
-
 
 export default ChatList;

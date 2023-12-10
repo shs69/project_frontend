@@ -1,7 +1,10 @@
 import styles from './Chatdisplay.module.css'
 
 function ChatDisplay() {
+
     const messages = [
+        { id: "username1", text: 'Привет как дела Все хорошо спасибВсе хорошо спасибВсе хорошо спасибВсе хорошо спасибВсе хорошо спасиб?', sender: 'user'},
+        { id: "username2", text: 'Все хорошо спасибо Все хорошо спасибВсе хорошо спасибВсе хорошо спасиб $\n fsdafsaf bfksda', sender: 'notuser' },
         { id: "username1", text: 'Привет как дела?', sender: 'user'},
         { id: "username2", text: 'Все хорошо спасибо', sender: 'notuser' },
         { id: "username1", text: 'Привет как дела?', sender: 'user'},
@@ -12,9 +15,6 @@ function ChatDisplay() {
         { id: "username2", text: 'Все хорошо спасибо', sender: 'notuser' },
         { id: "username1", text: 'Привет как дела?', sender: 'user'},
         { id: "username2", text: 'Все хорошо спасибо', sender: 'notuser' },
-        { id: "username1", text: 'Привет как дела?', sender: 'user'},
-        { id: "username2", text: 'Все хорошо спасибо', sender: 'notuser' },
-        
     ];
 
     return (

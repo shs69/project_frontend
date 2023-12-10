@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import styles from './Reg.module.css';
-
+import stylesLogin from '../Login/Login.module.css'
 
 function Reg() {
     const [username, setUsername] = useState('')
@@ -31,10 +31,10 @@ function Reg() {
     }
 
     return (
-        <div className={styles.body}>
+        <div className={stylesLogin.body}>
             <form onSubmit={submit}>
-                <div className={styles.regBox}>
-                    <img className={styles.logo}
+                <div className={stylesLogin.box}>
+                    <img className={stylesLogin.logo}
                         src='logo.png ' alt={'logo'}
                     />
                     <div>
@@ -45,36 +45,36 @@ function Reg() {
                             Введите данные, которые будут использоваться для входа в аккаунт
                         </p> */}
                     </div>
-                    <div className={styles.fields}>
-                        <label className={styles.label}>Имя пользователя</label>
+                    <div className={stylesLogin.fields}>
+                        <label className={stylesLogin.label}>Имя пользователя</label>
                         <input
                             name="username"
                             type="email"
                             value={username}
                             onChange={usernameChange}
                             placeholder=' Имя пользователя или почта'
-                            className={styles.loginInput}
+                            className={stylesLogin.inputs}
                         />
-                        <label className={styles.label}>Пароль</label>
+                        <label className={stylesLogin.label}>Пароль</label>
                         <input
                             name="password"
                             type="password"
                             value={password}
                             onChange={passwordChange}
                             placeholder=' Пароль'
-                            className={styles.loginInput}
+                            className={stylesLogin.inputs}
                         />
-                        <label className={styles.label}> Повторите пароль </label>
+                        <label className={stylesLogin.label}> Повторите пароль </label>
                         <input
                             name="repeatPassword"
                             type="password"
                             value={repeatPassword}
                             onChange={repeatPasswordChange}
                             placeholder=' Повторите пароль'
-                            className={styles.loginInput} />
+                            className={stylesLogin.inputs} />
                         <input type="submit" value="Зарегистрироваться" />
                     </div>
-                    <div className={styles.underSubmit}>
+                    <div className={stylesLogin.underSubmit}>
                         <span> У вас уже есть аккаунт? </span>
                         <span>
                             <Link to="/login"> Войти в аккаунт </Link>
