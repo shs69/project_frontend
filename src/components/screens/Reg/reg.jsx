@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useCookies } from 'react-cookie';
+import { Link, useNavigate } from 'react-router-dom';
+import { regAPI } from '../../../utils/query_api';
 import styles from './Reg.module.css';
 import stylesLogin from '../Login/Login.module.css'
 
@@ -8,8 +8,7 @@ function Reg() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [repeatPassword, setRepeatPassword] = useState('')
-    const [cookies, setCookie] = useCookies(['username', 'password'])
-
+    const navigate = useNavigate()
 
     const usernameChange = (event) => setUsername(event.target.value)
 
@@ -19,14 +18,22 @@ function Reg() {
 
     const submit = (event) => {
         event.preventDefault();
+
         if (repeatPassword === password && (username && password)) {
-            const newUsername = username
-            const newPassword = password
-            setCookie('username', newUsername, { path: "/" })
-            setCookie('password', newPassword, { path: "/" })
-            console.log("После изменения cookie")
-            console.log(cookies.username)
-            console.log(cookies.password)
+
+            regAPI.regApi(username.substring(0, username.length - 8), username, password
+            ).then((response) => {
+                console.log(response);
+                if (response.status === 200) {
+                    setPassword('')
+                    setRepeatPassword('')
+                    setUsername('')
+                    navigate("/api/v1/auth/login")
+                }
+            }).catch((error) => {
+                console.log(error.response);
+            });
+
         }
     }
 
@@ -46,7 +53,7 @@ function Reg() {
                         </p> */}
                     </div>
                     <div className={stylesLogin.fields}>
-                        <label className={stylesLogin.label}>Имя пользователя</label>
+                        <label className={stylesLogin.label}>Почта</label>
                         <input
                             name="username"
                             type="email"
@@ -77,7 +84,7 @@ function Reg() {
                     <div className={stylesLogin.underSubmit}>
                         <span> У вас уже есть аккаунт? </span>
                         <span>
-                            <Link to="/login"> Войти в аккаунт </Link>
+                            <Link className={stylesLogin.link} to="/api/v1/auth/login"> Войти в аккаунт </Link>
                         </span>
                     </div>
                 </div>

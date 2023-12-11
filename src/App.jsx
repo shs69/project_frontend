@@ -1,5 +1,4 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-
 import Login from './components/screens/Login/login';
 import Reg from './components/screens/Reg/reg';
 import Chatpage from "./components/screens/ChatPage/chatpage.jsx";
@@ -10,9 +9,9 @@ function App(){
         <CookiesProvider>
             <BrowserRouter>
                 <Routes>
-                    <Route path="login" element={<Login/>} />
-                    <Route path="reg" element={<Reg/>} />
-                    <Route path="chat" element={<Chatpage/>} />
+                    <Route path="/api/v1/auth/login" element={<Login/>} />
+                    <Route path="/api/v1/auth/reg" element={<Reg/>} />
+                    <Route path="/api/v1/auth/chat" element={<Chatpage/>} />
                 </Routes>
             </BrowserRouter>
         </CookiesProvider>

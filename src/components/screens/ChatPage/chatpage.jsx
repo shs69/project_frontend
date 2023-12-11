@@ -2,7 +2,8 @@ import styles from './Chatpage.module.css';
 import ChatList from "./ChatList/chat_list.jsx";
 import ChatDisplay from './ChatDisplay/chatdisplay.jsx';
 import ProfileFull from './Profile Full/profilefull.jsx';
-import { useState } from 'react';
+import Context from '../../../utils/context.jsx';
+import {useState } from 'react';
 
 function Chatpage() {
 
@@ -41,7 +42,9 @@ function Chatpage() {
             <ChatList chats={chats} onSelect={handleChatSelect} selectedChat={selectedChat} openProfile={ProfileOpen} />
             {!selectedChat && <div className={styles.welcome}> Выберите чат и начните переписываться </div>}
             {selectedChat && <ChatDisplay chatId={selectedChat} />}
-            {selectProfile && <ProfileFull onClose={closeProfile} />}
+            <Context.Provider value={closeProfile}> 
+                {selectProfile && <ProfileFull/>}
+            </Context.Provider>
         </div>
     )
 

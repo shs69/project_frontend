@@ -1,9 +1,11 @@
 import styles from './ProfileFull.module.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Avatar from './Avatar/avatar';
+import Context from '../../../../utils/context';
 
-function ProfileFull({ onClose }) {
+function ProfileFull() {
 
+    const onClose = useContext(Context);
     const [selectedBackground, setBackground] = useState();
     const [selectedForeground, setForeground] = useState();
     const [username, setUsername] = useState('');

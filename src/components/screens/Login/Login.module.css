@@ -125,7 +125,9 @@ input {
     flex: 1dvh;
 }
 
-
+.link{
+    color:#9B00E7;
+}
 @media (max-width: 981px) and (max-height: 899px) {
 
     /* планшеты */

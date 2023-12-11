@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCookies } from 'react-cookie';
 import styles from './Login.module.css';
-
+import { loginAPI } from '../../../utils/query_api';
 
 function Reg() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [cookies, setCookie] = useCookies(['username', 'password'])
     const navigate = useNavigate();
 
 
@@ -17,12 +15,20 @@ function Reg() {
 
     const submit = (event) => {
         event.preventDefault();
-        navigate("/chat");
+
+        // if (document.cookie) {   
+        //     navigate("/api/v1/auth/chat")  перекидываем пользователя в чат, когда есть куки вне действия submit
+
         if (username && password) {
-            setCookie('username', username, { path: "/" })
-            setCookie('password', password, { path: "/" })
-            console.log(cookies.username)
-            console.log(cookies.password)
+            loginAPI.loginApi(username, password
+            ).then((response) => {
+                console.log(response);
+                console.log(document.cookie);
+                navigate("/api/v1/auth/chat");
+                console.log(document.cookie)
+            }).catch((error) => {
+                console.log(error.response);
+            });
         }
     }
 
@@ -41,9 +47,9 @@ function Reg() {
                         </p>
                     </div>
                     <div className={styles.fields}>
-                        <label className={styles.label}>Имя пользователя</label>
+                        <label className={styles.label}> Почта </label>
                         <input
-                            name="username"
+                            name="email"
                             type="email"
                             value={username}
                             onChange={usernameChange}
@@ -64,7 +70,7 @@ function Reg() {
                     <div className={styles.underSubmit}>
                         <span> Ещё не зарегистрированы? </span>
                         <span>
-                            <Link to="/reg"> Создать аккаунт </Link>
+                            <Link className={styles.link} to="/api/v1/auth/reg"> Создать аккаунт </Link>
                         </span>
                     </div>
                 </div>
