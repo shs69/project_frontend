@@ -1,26 +1,21 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
 import Profile from "../Profile/profile";
 import styles from "./Chatlist.module.css";
-import { useNavigate } from "react-router-dom";
-import { loginAPI } from "../../../../utils/query_api";
+import chat from "../../../../utils/chatcontext";
 
-const ChatList = ({chats, onSelect, selectedChat, openProfile}) => {
-    const navigate = useNavigate();
+function ChatList() {
 
-    const logout = (event) => {
-        event.preventDefault();
-        loginAPI.logoutApi().then( (response) => {
-            console.log(response, document.cookie)
-            document.cookie = `${document.cookie}; max-age=-1`
-            navigate("/api/v1/auth/login")
-        }).catch((error) => {
-            console.log(error)
-        })
+    const [chats, onSelect, selectedChat] = useContext(chat)
+
+    const submit = (e) => {
+        e.preventDefault();
     }
-  
+
     return (
         <div className={styles.chatList}>
-            <Profile openProfile={openProfile}/>
+            <Profile/>
+            <input type="submit" className={styles.input} onClick={submit} value={"Создать чат"}/>
             {chats.map((chat) => (
                 <div key={chat.id} 
                 className={`${styles.chatItem} ${selectedChat === chat.id ? styles.selected : ''}`}
@@ -32,9 +27,8 @@ const ChatList = ({chats, onSelect, selectedChat, openProfile}) => {
                     </div>
                 </div>  
             ))}
-            <input type="submit" onClick={logout}/>
         </div>
     );
-};
+}
 
 export default ChatList;

@@ -33,6 +33,23 @@
     color: #FFF;
 }
 
+.input {
+    align-self: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: #FFF;
+    outline: 0;
+    border: 0;
+    border-radius: 0px;
+    background: #9B00E7;
+    height: 100dvh;
+    width: 300px;
+    cursor: pointer;
+    border-bottom: 7px #1C1C1C solid;
+}
+
 .chatName {
     color: #FFF;
     font-family: Inter;

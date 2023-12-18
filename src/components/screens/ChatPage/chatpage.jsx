@@ -3,12 +3,30 @@ import ChatList from "./ChatList/chat_list.jsx";
 import ChatDisplay from './ChatDisplay/chatdisplay.jsx';
 import ProfileFull from './Profile Full/profilefull.jsx';
 import Context from '../../../utils/context.jsx';
+import chat from '../../../utils/chatcontext.jsx';
+import { ProfileAPI } from '../../../utils/query_api.js';
 import {useState } from 'react';
 
 function Chatpage() {
 
     const [selectedChat, setSelectedChat] = useState(null);
     const [selectProfile, setSelectedProfile] = useState(false);
+    const [username, setUsername] = useState('');
+
+    async function getUserInfo() {
+        await ProfileAPI.getUserInfoApi(
+        ).then((response) => {
+            console.log(response.data)
+            setUsername(response.data.username);
+        }
+        ).catch((error) => {
+            console.log(error.response);
+        })
+
+    }
+
+    console.log(document.cookie)
+    getUserInfo()
 
     const chats = [
         { id: 1, name: '1' },
@@ -39,15 +57,20 @@ function Chatpage() {
 
     return (
         <div className={styles.chatPage}>
-            <ChatList chats={chats} onSelect={handleChatSelect} selectedChat={selectedChat} openProfile={ProfileOpen} />
+            <Context.Provider value={[username, ProfileOpen]}>
+                <chat.Provider value={[chats, handleChatSelect, selectedChat]}>
+                    <ChatList/>
+                </chat.Provider>
+
+            </Context.Provider>
             {!selectedChat && <div className={styles.welcome}> Выберите чат и начните переписываться </div>}
             {selectedChat && <ChatDisplay chatId={selectedChat} />}
-            <Context.Provider value={closeProfile}> 
-                {selectProfile && <ProfileFull/>}
+            <Context.Provider value={[closeProfile, username]}>
+                {selectProfile && <ProfileFull />}
             </Context.Provider>
         </div>
     )
 
 }
 
-export default Chatpage; 
+export default Chatpage;
