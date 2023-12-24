@@ -1,0 +1,185 @@
+.chatDisplay {
+    background-color: #1C1C1C;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 80dvw;
+}
+
+.messageContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+}
+
+.messageContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.userContainer {
+    display: flex;
+    flex-direction: row;
+    text-wrap: wrap;
+    flex-wrap: wrap;
+    word-break: break-all;
+    width: 100%;
+    min-height: 10dvh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time {
+    align-self: flex-end;
+    margin-left: 1dvw;
+    margin-right: 1dvw;
+    margin-bottom: 1dvh;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.usermessage {
+    font-size: 20px;
+    align-self: flex-end;
+    color: white;
+    align-self: flex-end;
+    border-radius: 10px;
+    background: linear-gradient(92deg, #B64DA5 0%, #903ABA 100%);
+    margin: 8px;
+    max-width: 70%;
+    text-wrap: wrap;
+}
+
+.notuser {
+    margin-top: 6dvh;
+    margin-bottom: 2dvh;
+    display: flex;
+    flex-direction: row;
+    max-width: 70%;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 1dvh;
+    padding-left: 0.5dvw;
+}
+
+.usernameMessage {
+    margin-top: 1dvh;
+    margin-left: 2dvh;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.itemMessage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1dvw;
+    font-size: 20px;
+    align-self: flex-start;
+    color: white;
+    border-radius: 10px;
+    background: #2E2E2E;
+    max-width: 70%;
+    min-width: 12dvw;
+}
+
+.textMessage {
+    text-wrap: wrap;
+    word-wrap: break-word;
+    margin: 8px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 85%;
+    margin-left: 2dvh;
+    margin-top: 2dvh;
+}
+
+.formMessage {
+    height: 7dvh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    background-color: #2E2E2E;
+}
+
+.formMessage input {
+    outline: 0;
+    border: 0;
+    height: 5dvh;
+    color: #FFF;
+    background-color: #2E2E2E;
+    flex: 1;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-family: Inter;
+    font-size: 18px;
+}
+
+.formMessage button {
+    font-family: Inter;
+    font-size: 16px;
+    background-color: #2E2E2E;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.submit {
+    width: 2dvw;
+    margin-right: 0.5dvw;
+}
+
+.avatar1 {
+    align-self: flex-end;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #FF0000, #FF9900);
+}
+
+.avatar2 {
+    align-self: flex-end;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #E500C0, #903ABA);
+}
+
+.avatar3 {
+    align-self: flex-end;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #FF7575, #FF967E);
+}
+
+.avatar4 {
+    align-self: flex-end;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #75FFC5, #137FFF);
+    ;
+}

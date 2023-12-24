@@ -1,0 +1,52 @@
+.chatPage {
+    display: flex;
+    height: 100dvh;
+    width: 100dvw;
+    background: #1C1C1C;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 300px);
+    height: 100%;
+    color: #DFDFDF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.avatar1 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #FF0000, #FF9900);
+}
+
+.avatar2 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #E500C0, #903ABA);
+}
+
+.avatar3 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #FF7575, #FF967E);
+}
+
+.avatar4 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #75FFC5, #137FFF);;
+}

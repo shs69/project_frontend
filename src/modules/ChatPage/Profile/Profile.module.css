@@ -1,0 +1,60 @@
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1dvw;
+    padding: 5px;
+    width: 100%;
+    border-bottom: 7px #1C1C1C solid;
+    cursor: pointer;
+}
+
+.logo{
+    margin-left: 1dvw;
+    width: 60px;
+}
+
+
+.icon{
+    width: 20px;
+}
+
+p {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.avatar1 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #FF0000, #FF9900);
+}
+
+.avatar2 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #E500C0, #903ABA);
+}
+
+.avatar3 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #FF7575, #FF967E);
+}
+
+.avatar4 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #75FFC5, #137FFF);;
+}

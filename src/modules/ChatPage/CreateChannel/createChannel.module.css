@@ -1,0 +1,122 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.full {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background: #1C1C1C;
+    width: 35dvw;
+    height: 60dvh;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 3;
+    gap: 2dvh;
+}
+
+.firstline {
+    margin-top: 2dvh;
+    align-self: center;
+}
+
+.channelName {
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 26px;
+    color: #FFF
+}
+
+.label {
+    padding-left: 2dvw;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 24px;
+    color: #FFF
+}
+
+.user {
+    font-family: Inter;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14dvw;
+    height: 5dvh;
+    color: #FFF;
+    margin: 1dvh;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.usersContainer {
+    overflow-y: scroll;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    max-height: 18dvh;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.usersContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.beforeSubmit {
+    padding-left: 2dvw;
+    color: #7F7F7F;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-wrap: wrap;
+}
+
+.submit {
+    margin-top: 0.5dvh;
+    margin-bottom: 2dvh;
+    align-self: center;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 400;
+    text-align: center;
+    color: #FFF;
+    background-color: #9B00E7;
+    border-radius: 6px;
+    stroke-width: 1px;
+    border: 0;
+    outline: 0;
+    height: 6dvh;
+    cursor: pointer;
+    width: 20dvw;
+}
+
+.textInput {
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    width: 30dvw;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 0;
+    outline: 0;
+    color: #DFDFDF;
+    font-family: Inter;
+    font-size: 24px;
+    margin-left: 2dvw;
+}

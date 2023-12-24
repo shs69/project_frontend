@@ -1,0 +1,186 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.full {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1C1C1C;
+    width: 600px;
+    height: 600px;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 3;
+    gap: 2dvh;
+}
+
+.inputs {
+    align-self: center;
+    display: flex;
+    gap: 3dvw;
+    padding: 5px;
+}
+
+.input {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: #FFF;
+    outline: 0;
+    border: 0;
+    border-radius: 12px;
+    background: #9B00E7;
+    height: 5dvh;
+    width: 10dvw;
+    cursor: pointer;
+}
+
+.logout {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: #FFF;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    background: #151515;
+    height: 5dvh;
+    width: 15dvw;
+    cursor: pointer;
+}
+
+.textInput {
+    background: #2E2E2E;
+    color: white;
+    width: 300px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 0;
+    outline: 0;
+    color: #DFDFDF;
+    font-family: Inter;
+    font-size: 36px;
+}
+
+.textProfile {
+    color: #FFF;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+.changeBackground {
+    display: flex;
+    justify-content: space-between;
+    gap: 1dvw;
+}
+
+.changeIcon {
+    display: flex;
+    justify-content: space-between;
+    gap: 1dvw;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: rgba(46,46,46, 1);
+}
+
+.avatar1 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #FF0000, #FF9900);
+}
+
+.avatar2 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #E500C0, #903ABA);
+}
+
+.avatar3 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #FF7575, #FF967E);
+}
+
+.avatar4 {
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(135deg, #75FFC5, #137FFF);;
+}
+
+.circle1 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF0000, #FF9900);
+    cursor: pointer;
+}
+
+.circle2 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E500C0, #903ABA);
+    cursor: pointer;
+}
+
+.circle3 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF7575, #FF967E);
+    cursor: pointer;
+}
+
+.circle4 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #75FFC5, #137FFF);
+    cursor: pointer;
+}
+
+.selected {
+    outline: 3.5px solid #DFDFDF;
+}
+
+.Icon {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #75FFC5, #137FFF);
+}
